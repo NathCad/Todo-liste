@@ -2,7 +2,7 @@ const textInput = document.getElementById("todo-input-text");
 const bouton = document.querySelector(`input[type="button"][value="Ajouter"]`);
 
 const storeKey = "todoList";
-const todoList = JSON.parse(localStorage.getItem(storeKey)) ?? [];
+const todoList = JSON.parse(localStorage.getItem(storeKey) ?? "[]");
 
 bouton.addEventListener("click", addListeItem);
 textInput.addEventListener("keydown", (event) => {
